@@ -1,11 +1,12 @@
-const canvas = document.getElementById('canvas')
-const context = canvas.getContext('2d')
-const contextWidth = canvas.width
-const contextHeight = canvas.height
-context.font = '30px Ariel'
-let offsetX, offsetY
-const coordinates = []
-let isDone = false
+
+const canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+const contextWidth = canvas.width;
+const contextHeight = canvas.height;
+context.font = '30px Ariel';
+let offsetX, offsetY;
+const coordinates = [];
+let isDone = false;
 
 const startCoordinatesTracking = () => {
     context.canvas.addEventListener('mousemove', function (event) {
@@ -98,5 +99,5 @@ const calculateSurfaceOfPolygon = (coordinatesArray) => {
     }
 
     const percentageOfArea = ((Math.abs(total) / 250000) * 100).toFixed(2)
-    context.strokeText(`Area: ${Math.abs(total)}`, 10, 50)
+    context.strokeText(`Area: ${Math.abs(total)} (${percentageOfArea}% of Canvas)`, 10, 50)
 }
