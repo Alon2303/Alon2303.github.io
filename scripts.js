@@ -98,5 +98,5 @@ const calculateSurfaceOfPolygon = (coordinatesArray) => {
     }
 
     const percentageOfArea = ((Math.abs(total) / 250000) * 100).toFixed(2)
-    context.fillText(Math.abs(total), 10, 50)
+    context.fillText(`Area: ${Math.abs(total)}`, 10, 50)
 }
