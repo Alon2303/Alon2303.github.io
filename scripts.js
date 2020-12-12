@@ -26,7 +26,7 @@ const getCanvasBorders = () => {
 
 getCanvasBorders()
 
-context.lineWidth = 4
+context.lineWidth = 2
 context.strokeStyle = 'black'
 
 document.getElementById('calc').addEventListener('click', () => {
@@ -98,5 +98,5 @@ const calculateSurfaceOfPolygon = (coordinatesArray) => {
     }
 
     const percentageOfArea = ((Math.abs(total) / 250000) * 100).toFixed(2)
-    context.fillText(`Area: ${Math.abs(total)}`, 10, 50)
+    context.strokeText(`Area: ${Math.abs(total)}`, 10, 50)
 }
