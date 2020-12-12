@@ -31,10 +31,10 @@ context.strokeStyle = 'black'
 
 document.getElementById('calc').addEventListener('click', () => {
     if (context.fillStyle === '#000000') {
-        context.fillStyle = getRandomColor();
+        context.fillStyle = getRandomColor()
         context.lineTo(coordinates[0].x, coordinates[0].y)
-        context.stroke();
-        context.fill();
+        context.stroke()
+        context.fill()
     }
     isDone = true
     calculateSurfaceOfPolygon(coordinates)
@@ -97,12 +97,6 @@ const calculateSurfaceOfPolygon = (coordinatesArray) => {
         total -= subX * subY * 0.5
     }
 
-    const percentageOfArea = ((Math.abs(total) / 250000) * 100).toFixed(2);
-    context.fillText(
-        Math.abs(total),
-        10,
-        50
-    )
+    const percentageOfArea = ((Math.abs(total) / 250000) * 100).toFixed(2)
+    context.fillText(Math.abs(total), 10, 50)
 }
-
-module.exports = {calculateSurfaceOfPolygon}
